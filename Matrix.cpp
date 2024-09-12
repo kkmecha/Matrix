@@ -10,7 +10,7 @@ vector<vector<double>> matrixAdd(const vector<vector<double>>& A, const vector<v
     int cols = A[0].size();
     
     if (rows != B.size() || cols != B[0].size()) {
-        throw invalid_argument("行列のサイズが一致しません。");
+        printf("行列のサイズが一致しません。");
     }
     
     vector<vector<double>> result(rows, vector<double>(cols));
@@ -23,12 +23,12 @@ vector<vector<double>> matrixAdd(const vector<vector<double>>& A, const vector<v
 }
 
 // 行列の減算
-vector<vector<double>> matrixSubtract(const vector<vector<double>>& A, const vector<vector<double>>& B) {
+vector<vector<double>> matrixSub(const vector<vector<double>>& A, const vector<vector<double>>& B) {
     int rows = A.size();
     int cols = A[0].size();
     
     if (rows != B.size() || cols != B[0].size()) {
-        throw invalid_argument("行列のサイズが一致しません。");
+        printf("行列のサイズが一致しません。");
     }
     
     vector<vector<double>> result(rows, vector<double>(cols));
@@ -41,14 +41,14 @@ vector<vector<double>> matrixSubtract(const vector<vector<double>>& A, const vec
 }
 
 // 行列の乗算
-vector<vector<double>> matrixMultiply(const vector<vector<double>>& A, const vector<vector<double>>& B) {
+vector<vector<double>> matrixMult(const vector<vector<double>>& A, const vector<vector<double>>& B) {
     int rowA = A.size();
     int colA = A[0].size();
     int rowB = B.size();
     int colB = B[0].size();
     
     if (colA != rowB) {
-        throw invalid_argument("行列のサイズが一致しません。");
+        printf("行列のサイズが一致しません。");
     }
     
     vector<vector<double>> result(rowA, vector<double>(colB, 0.0));
@@ -63,7 +63,7 @@ vector<vector<double>> matrixMultiply(const vector<vector<double>>& A, const vec
 }
 
 // 行列とスカラーの乗算
-vector<vector<double>> scalarMultiply(const vector<vector<double>>& A, double scalar) {
+vector<vector<double>> scalarMult(const vector<vector<double>>& A, double scalar) {
     int rows = A.size();
     int cols = A[0].size();
     
@@ -108,7 +108,7 @@ vector<vector<double>> inverse(const vector<vector<double>>& A) {
         // 主対角線上の要素を1にするためのスケーリング
         double diag = augmented[i][i];
         if (diag == 0) {
-            throw runtime_error("行列は逆行列を持ちません（ゼロの主対角線要素）。");
+            printf("行列は逆行列を持ちません（ゼロの主対角線要素）。");
         }
         for (int j = 0; j < 2 * n; ++j) {
             augmented[i][j] /= diag;
