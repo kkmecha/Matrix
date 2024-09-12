@@ -4,8 +4,9 @@
 
 using namespace std;
 
+Matrix::Matrix();
 // 行列の加算
-vector<vector<float>> matrixAdd(const vector<vector<float>>& A, const vector<vector<float>>& B) {
+Matrix::vector<vector<float>> matrixAdd(const vector<vector<float>>& A, const vector<vector<float>>& B) {
     int rows = A.size();
     int cols = A[0].size();
     
@@ -23,7 +24,7 @@ vector<vector<float>> matrixAdd(const vector<vector<float>>& A, const vector<vec
 }
 
 // 行列の減算
-vector<vector<float>> matrixSub(const vector<vector<float>>& A, const vector<vector<float>>& B) {
+Matrix::vector<vector<float>> matrixSub(const vector<vector<float>>& A, const vector<vector<float>>& B) {
     int rows = A.size();
     int cols = A[0].size();
     
@@ -41,7 +42,7 @@ vector<vector<float>> matrixSub(const vector<vector<float>>& A, const vector<vec
 }
 
 // 行列の乗算
-vector<vector<float>> matrixMult(const vector<vector<float>>& A, const vector<vector<float>>& B) {
+Matrix::vector<vector<float>> matrixMult(const vector<vector<float>>& A, const vector<vector<float>>& B) {
     int rowA = A.size();
     int colA = A[0].size();
     int rowB = B.size();
@@ -63,7 +64,7 @@ vector<vector<float>> matrixMult(const vector<vector<float>>& A, const vector<ve
 }
 
 // 行列とスカラーの乗算
-vector<vector<float>> scalarMult(const vector<vector<float>>& A, float scalar) {
+Matrix::vector<vector<float>> scalarMult(const vector<vector<float>>& A, float scalar) {
     int rows = A.size();
     int cols = A[0].size();
     
@@ -77,7 +78,7 @@ vector<vector<float>> scalarMult(const vector<vector<float>>& A, float scalar) {
 }
 
 // 行列の転置
-vector<vector<float>> transpose(const vector<vector<float>>& A) {
+Matrix::vector<vector<float>> transpose(const vector<vector<float>>& A) {
     int rows = A.size();
     int cols = A[0].size();
     
@@ -91,7 +92,7 @@ vector<vector<float>> transpose(const vector<vector<float>>& A) {
 }
 
 // 行列の逆行列を計算する関数 (ガウス・ジョルダン法)
-vector<vector<float>> inverse(const vector<vector<float>>& A) {
+Matrix::vector<vector<float>> inverse(const vector<vector<float>>& A) {
     int n = A.size();
     vector<vector<float>> augmented(n, vector<float>(2 * n));
 
