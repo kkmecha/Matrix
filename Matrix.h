@@ -7,6 +7,7 @@
 
 class Matrix{
     public :
+        Matrix();
         vector<vector<float>> matrixAdd(const vector<vector<float>>& A, const vector<vector<float>>& B);
         vector<vector<float>> matrixSub(const vector<vector<float>>& A, const vector<vector<float>>& B);
         vector<vector<float>> matrixMult(const vector<vector<float>>& A, const vector<vector<float>>& B);
