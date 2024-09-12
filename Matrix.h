@@ -7,11 +7,11 @@
 
 class Matrix{
     public :
-        vector<vector<double>> matrixAdd(const vector<vector<double>>& A, const vector<vector<double>>& B);
-        vector<vector<double>> matrixSub(const vector<vector<double>>& A, const vector<vector<double>>& B);
-        vector<vector<double>> matrixMult(const vector<vector<double>>& A, const vector<vector<double>>& B);
-        vector<vector<double>> scalarMult(const vector<vector<double>>& A, double scalar);
-        vector<vector<double>> transpose(const vector<vector<double>>& A);
-        vector<vector<double>> inverse(const vector<vector<double>>& A);
+        vector<vector<float>> matrixAdd(const vector<vector<float>>& A, const vector<vector<float>>& B);
+        vector<vector<float>> matrixSub(const vector<vector<float>>& A, const vector<vector<float>>& B);
+        vector<vector<float>> matrixMult(const vector<vector<float>>& A, const vector<vector<float>>& B);
+        vector<vector<float>> scalarMult(const vector<vector<float>>& A, float scalar);
+        vector<vector<float>> transpose(const vector<vector<float>>& A);
+        vector<vector<float>> inverse(const vector<vector<float>>& A);
 };
 #endif 
