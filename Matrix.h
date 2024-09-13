@@ -8,11 +8,11 @@
 class Matrix{
     public :
         Matrix();
-        vector<vector<float>> matrixAdd(const vector<vector<float>>& A, const vector<vector<float>>& B);
-        vector<vector<float>> matrixSub(const vector<vector<float>>& A, const vector<vector<float>>& B);
-        vector<vector<float>> matrixMult(const vector<vector<float>>& A, const vector<vector<float>>& B);
-        vector<vector<float>> scalarMult(const vector<vector<float>>& A, float scalar);
-        vector<vector<float>> transpose(const vector<vector<float>>& A);
-        vector<vector<float>> inverse(const vector<vector<float>>& A);
+        void matrixAdd(const vector<vector<float>>& A, const vector<vector<float>>& B, vector<vector<float>>& result);
+        void matrixSub(const vector<vector<float>>& A, const vector<vector<float>>& B, vector<vector<float>>& result);
+        void matrixMult(const vector<vector<float>>& A, const vector<vector<float>>& B, vector<vector<float>>& result);
+        void scalarMult(const vector<vector<float>>& A, float scalar, vector<vector<float>>& result);
+        void transpose(const vector<vector<float>>& A, vector<vector<float>>& result);
+        void inverse(const vector<vector<float>>& A, vector<vector<float>>& result);
 };
 #endif 
